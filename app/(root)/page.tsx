@@ -1,8 +1,13 @@
 import HeaderBox from "@/components/HeaderBox";
+import RightSidebar from "@/components/RightSidebar";
 import TotalBalanceBox from "@/components/TotalBalanceBox";
 
 const Home = () => {
-  const loggedIn = { firstname: "Uche" };
+  const loggedIn = {
+    firstName: "Uche",
+    lastName: "Obiekwe",
+    email: "uobiekwe@mail.pro",
+  };
 
   return (
     <section className="home">
@@ -11,7 +16,7 @@ const Home = () => {
           <HeaderBox
             type="greeting"
             title="Welcome"
-            user={loggedIn.firstname || "Guest"}
+            user={loggedIn.firstName || "Guest"}
             subtext="Access and manage your account and transactions efficiently"
           />
           <TotalBalanceBox
@@ -20,7 +25,13 @@ const Home = () => {
             totalCurrentBalance={450500}
           />
         </header>
+        RECENT TRANSACTIONS
       </div>
+      <RightSidebar
+        user={loggedIn}
+        transactions={[]}
+        banks={[{ currentBalance: 9500 }, { currentBalance: 55000 }]}
+      />
     </section>
   );
 };
