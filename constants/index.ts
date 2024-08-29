@@ -61,7 +61,7 @@ export const topCategoryStyles = {
       bg: "bg-blue-100",
       indicator: "bg-blue-700",
     },
-    icon: "/icons/monitor.svg",
+    icon: "/icons/food.svg",
   },
   Travel: {
     bg: "bg-success-25",
@@ -74,7 +74,20 @@ export const topCategoryStyles = {
       bg: "bg-success-100",
       indicator: "bg-success-700",
     },
-    icon: "/icons/coins.svg",
+    icon: "/icons/plane.svg",
+  },
+  Payment: {
+    bg: "bg-yellow-50",
+    circleBg: "bg-yellow-100",
+    text: {
+      main: "text-yellow-800",
+      count: "text-yellow-700",
+    },
+    progress: {
+      bg: "bg-yellow-100",
+      indicator: "bg-yellow-700",
+    },
+    icon: "/icons/money-send.svg",
   },
   default: {
     bg: "bg-pink-25",

@@ -41,9 +41,9 @@ const MobileNav = ({ user }: MobileNavProps) => {
                     pathname === link.route ||
                     pathname.startsWith(`${link.route}/`);
                   return (
-                    <SheetClose asChild key={link.route}>
+                    <SheetClose asChild key={link.route} className="min-w-full">
                       <Link
-                        className={cn("mobilenav-sheet_close w-full", {
+                        className={cn("mobilenav-sheet_close", {
                           "bg-bank-gradient": isActive,
                         })}
                         href={link.route}
