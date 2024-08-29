@@ -6,12 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Footer from "./Footer";
+import PlaidLink from "./PlaidLink";
 
 const Sidebar = ({ user }: SiderbarProps) => {
   const pathname = usePathname();
 
   return (
-    <section className="sidebar">
+    <section className="sidebar z-50">
       <nav className="flex flex-col gap-4">
         <Link
           href={"/"}
@@ -33,6 +34,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
             <Link
               className={cn("sidebar-link", { "bg-bank-gradient": isActive })}
               href={link.route}
+              key={link.label}
             >
               <div className="relative size-6">
                 <Image
@@ -48,7 +50,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
             </Link>
           );
         })}
-        USER
+        <PlaidLink user={user} />
       </nav>
       <Footer user={user} />
     </section>
