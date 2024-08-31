@@ -32,7 +32,7 @@ const CategoryBadge = ({ category }: any) => {
 
 const TransactionsTable = ({ transactions }: TransactionTableProps) => {
   return (
-    <Table className="">
+    <Table className="overflow-x-scroll">
       <TableHeader className="bg-[#f9fafb]">
         <TableRow>
           <TableHead className="px-2">Transaction</TableHead>

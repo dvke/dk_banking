@@ -12,7 +12,7 @@ import {
 } from "react-plaid-link";
 import { Button } from "./ui/button";
 
-const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
+const PlaidLink = ({ user, variant, isCollapse }: PlaidLinkProps) => {
   const router = useRouter();
   const [token, setToken] = useState("");
 
@@ -62,7 +62,11 @@ const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
           Connect bank
         </Button>
       ) : (
-        <Button onClick={() => open()} className="plaidlink-default">
+        <Button
+          onClick={() => open()}
+          className="plaidlink-default"
+          title="Connect Bank"
+        >
           <div className="relative size-6">
             <Image
               src={"/icons/connect-bank.svg"}
@@ -71,7 +75,11 @@ const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
               height={24}
             />
           </div>
-          <p className="hidden text-16 font-semibold text-black-2 xl:block">
+          <p
+            className={`${
+              isCollapse ? "hidden" : ""
+            } block text-16 font-semibold text-black-2 max-xl:hidden`}
+          >
             Connect bank
           </p>
         </Button>

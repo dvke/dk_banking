@@ -177,6 +177,7 @@ declare interface PlaidLinkProps {
   user: User;
   variant?: "primary" | "ghost";
   dwollaCustomerId?: string;
+  isCollapse: boolean;
 }
 
 // declare type User = sdk.Models.Document & {
@@ -212,6 +213,7 @@ declare interface TotlaBalanceBoxProps {
 declare interface FooterProps {
   user: User;
   type?: "mobile" | "desktop";
+  isCollapse: boolean;
 }
 
 declare interface RightSidebarProps {
